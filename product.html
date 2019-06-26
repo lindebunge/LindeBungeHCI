@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linde</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="topnav">
+    <a class="HCI" href="index.html">HCI</a>
+    <a class="rest" href="index.html">HOME</a>
+    <a class="rest" href="topic.html">TOPIC</a>
+    <a class="rest" href="workshop.html">WORKSHOP</a>
+    <a class="rest" href="excursion.html">EXCURSION</a>
+    <a class="rest active" href="lab_weeks.html">LAB WEEKS</a>
+</div>
+
+
+<div id="wrapper">
+
+    <div id="verticaal">
+        PRODUCT
+        <h2>
+            LAB WEEKS
+        </h2>
+    </div>
+    <div id="paarsblok">
+        <div id="fotos">
+            <img src="assets/product/product1.jpeg" width="100"/>
+            <img src="assets/product/product2.jpeg" width="180"/>
+            <br>
+            <br>
+            <br>
+            <img src="assets/product/product3.jpeg" width="100"/>
+            <img src="assets/product/product4.jpg" width="180"/>
+            <br>
+            <br>
+            <br>
+
+            <!--            HIERONDER KUN JE DE YOUTUBE LINK AANPASSEN. JE HEOFT ALLEEN DE LINK AAN TE PASSEN.-->
+
+            <iframe width="450" height="270" src="https://www.youtube.com/embed/UFjXGYgtnkM" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+
+        <div id="tekst">
+            <h1>
+                WAT
+            </h1>
+            <p>
+                Ons concept is gebaseerd op een onbegroeide wereld en wanneer mensen dichterbij komen en bepaalde
+                interacties uitvoeren zal er een hele wereld worden gecreëerd en tot leven wordt gebracht. We zullen een
+                interactieve muur projecteren die verschillende elementen zal laten groeien. Er zal een bos ontstaan
+                door middel van groeiende bomen, een sterrenhemel en dieren die in het bos tot leven komen.
+                <br><br>
+                Het doel is
+                om mensen op mooie manier een ervaring te laten beleven omdat ze zelf iets gaan creëren. Ze zullen met
+                een tevreden gevoel onze omgeving verlaten omdat iets hebben bijgedragen aan het maken van een mooie
+                wereld.
+                <br><br>
+                De interactieve muur wordt gemaakt met verschillende technieken. Zo zullen wij onder andere een
+                conductive touchboard gebruiken, processing, elektrische verf, een arduino en ledlampjes.
+            </p>
+
+            <h1>
+                HOE
+            </h1>
+            <p>
+                De basis van de code voor de bomen die we gebruikten zijn afkomstig van een open processing:
+                <br>
+                https://www.openprocessing.org/sketch/144159
+                <br>
+                Deze code genereert een andere groeiende boom bij elke
+                herstart.
+                <br>
+                Na het vinden van deze code hebben we hem zo bewerkt dat er drie bomen groeiren als we op een
+                knop drukken en op een andere knop, een nieuw pad is een nieuwe boom die wordt gegenereerd.
+                <br>
+                Daarna hebben we de klasse voor één boom drie keer vermenigvuldigd tot drie verschillende groeiende
+                bomen. We
+                hebben ze ook zo ingesteld dat ze op aparte knoppen kunnen groeien. Om de ervaring te maken voor meer
+                mensen die op meerdere knoppen kunnen drukken en zo dat de bomen tegelijkertijd zouden groeien.
+                <br>
+                We
+                wisten dat als we bomen kunnen laten groeien op keyPressed of mousePressed dan zou het ook mogelijk
+                moeten zijn met touchboard.
+                <br>
+                Om het touchboard in te stellen vonden we een code uit
+                bibliotheekvoorbeelden die informatie naar de verwerking stuurt over welke elektrode er wordt ingedrukt
+                is 1 of losgelaten is 0. Met deze getallen en aantallen elektroden (van 0 tot 11) konden we voorwaarden
+                en alle interactieve elementen creëren die we wilden verwerken.
+                <br>
+                Daarna hebben we geluid toegevoegd. Op
+                het internet ontdekten we dat de Minim bibliotheek beter werkt dan de bibliotheek van de processing van
+                geluiden. Alle geluiden moesten zo worden geknipt of bewerkt dat ze in een lus correct klinken. Het
+                achtergrondgeluid begint bij de start van het programma en de loops, het geluid van groeiende bomen
+                begint bij het indrukken van de elektrode voor de groeiende boom (speelt in een lus) en wordt gepauzeerd
+                bij het loslaten van de elektrode, hiervoor hebben we variabele isPlayingGrow gebruikt.
+
+                <br>
+                Uiteindelijk
+                hebben we geluiden voor dieren/mensen toegevoegd die één keer worden afgespeeld wanneer ze worden
+                ingedrukt en dan worden ze teruggespoeld (minimale bibliotheeksyntaxis) zodat de gebruiker ze opnieuw
+                kan indrukken.<br><br>
+                Voor de sterrenhemel zijn eerst variabelen gemaakt voor die pinnen. In de void loop is
+                geschreven wat de ledjes moeten doen wanneer ze dichterbij de sensor komen. Dit is gedaan door middel
+                van een berekening. Als je op een bepaalde afstand stond gingen de ledjes aan en uit. De pinnen zitten
+                in een PinMode, zodat de pin kan fungureren als een in- en uitgang. Tot slot hebben de leds een
+                analogWrite en geen digitalWrite omdat de analogWrite de heldeheid kan veranderen en de digitalWrite kan
+                alleen worden in- en uitgeschakeld.<br><br>
+                Als eerste hebben we de zwarte platen zwart geverfd, om vervolgens
+                gaatjes te boren voor de ledjes. Daarna hebben we de illustraties gemaakt en daar weer gaatjes in
+                geboord zodat we het touchboard konden aansluiten. Op het laatste zijn alle ledjes en de arduino
+                aangesloten.
+            </p>
+
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
